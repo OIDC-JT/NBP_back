@@ -34,8 +34,8 @@
         "list": [1,2,3,4]
     }
 
-<img src="./캡처1.jpg" width="80%" height="30%"></img>
+![캡처1](https://user-images.githubusercontent.com/37846235/177045385-75a25c02-b7cf-48f3-8a44-4ddb3fc24d3d.JPG)
 
 ### 결과값
 
-<img src="./캡처2.jpg" width="80%" height="30%"></img>
+![캡처2](https://user-images.githubusercontent.com/37846235/177045404-21c445e9-686b-45fd-aa4e-07b5e4208737.JPG)
