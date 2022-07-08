@@ -16,7 +16,8 @@
     pip install djangorestframework
     pip install django-cors-headers
     pip install beautifulsoup4
-    pip install rest_framework_simplejwt
+    pip install djangorestframework-simplejwt
+    pip install dj-rest-auth
     pip install pymysql
 
 ### 4. 프로젝트 폴더 위치로 이동 (manage.py 파일이 있는 위치)
@@ -29,10 +30,12 @@
 ### 6. 서버 실행
     python manage.py runserver
 
-### 127.0.0.1:8000 으로 접속
+## API
+
+### NBP 함수 사용 ) 127.0.0.1:8000 으로 접속
 
 ### 입력값 - POST 메소드 사용
-ex.
+    ex.
     {
         "list": [1,2,3,4]
     }
@@ -42,3 +45,17 @@ ex.
 ### 결과값
 
 ![캡처2](https://user-images.githubusercontent.com/37846235/177045404-21c445e9-686b-45fd-aa4e-07b5e4208737.JPG)
+
+### 유저 회원가입 및 로그인/로그아웃
+
+### 회원가입
+### 127.0.0.1:8000/accounts - POST 메소드 사용
+    username, email, 비밀번호, 비밀번호 확인 입력
+
+### 로그인
+### 127.0.0.1:8000/accounts/login - POST 메소드 사용
+    username, password 입력
+
+### 로그아웃
+### 127.0.0.1:8000 - POST 메소드 사용
+    입력값 없이 POST방식으로 보내기
