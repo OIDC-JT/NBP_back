@@ -16,6 +16,8 @@
     pip install djangorestframework
     pip install django-cors-headers
     pip install beautifulsoup4
+    pip install rest_framework_simplejwt
+    pip install pymysql
 
 ### 4. 프로젝트 폴더 위치로 이동 (manage.py 파일이 있는 위치)
     cd cloud
@@ -30,6 +32,7 @@
 ### 127.0.0.1:8000 으로 접속
 
 ### 입력값 - POST 메소드 사용
+ex.
     {
         "list": [1,2,3,4]
     }

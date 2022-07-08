@@ -69,6 +69,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
+# jwt 사용한 유저 생성 및 관리
+
 REST_USE_JWT = True
 
 from datetime import timedelta
