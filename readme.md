@@ -50,12 +50,12 @@
 
 ### 회원가입
 ### 127.0.0.1:8000/accounts - POST 메소드 사용
-    username, email, 비밀번호, 비밀번호 확인 입력
+    username, email, password1(비밀번호), password2(비밀번호 확인) 입력
 
 ### 로그인
 ### 127.0.0.1:8000/accounts/login - POST 메소드 사용
     username, password 입력
 
 ### 로그아웃
-### 127.0.0.1:8000 - POST 메소드 사용
+### 127.0.0.1:8000/accounts/logout - POST 메소드 사용
     입력값 없이 POST방식으로 보내기
