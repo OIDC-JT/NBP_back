@@ -57,3 +57,6 @@ class User(AbstractUser):
 
     # def __str__(self):
     #     return self.email
+
+class Autosql(models.Model):
+    username = models.TextField(max_length=200)
