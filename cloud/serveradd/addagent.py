@@ -27,15 +27,15 @@ def batch(ID, OS, ServerID):
     elif OS == 'Ubuntu1604':
         OS = Ubuntu1604                
 
-    f = open('%s.bat'%ID, 'w')
+    f = open('%s.bat'%ServerID, 'w')
     f.write(OS)
     f.close()                                                           #local에 batch 파일 저장
                                               #NBP S3 Upload Code
     s3 = boto3.client(service_name, endpoint_url=endpoint_url, aws_access_key_id=access_key,
                     aws_secret_access_key=secret_key)
     bucket_name = 'oidc'
-    object_name = '%s.bat'%ID                                       #파일 이름(파일명 : ID)
-    local_file_path = 'C:/Users/user/Desktop/NBP_back/cloud/%s.bat'%ID      #local 위치 
+    object_name = '%s.bat'%ServerID                                       #파일 이름(파일명 : ID)
+    local_file_path = 'C:/Users/user/Desktop/NBP_back/cloud/%s.bat'%ServerID      #local 위치 
     #local_file_path = '/root/%s.bat'%ID                             #서버상 위치
 
     s3.upload_file(local_file_path, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
