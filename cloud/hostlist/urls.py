@@ -2,7 +2,7 @@ from django.urls import path
 from .views import *
 from . import views
 
-app_name="accounts"
+app_name="hostlist"
 urlpatterns = [
-    path('',views.AddsqlView.as_view()),
+    path('',views.hoslistView.as_view()),
 ]
