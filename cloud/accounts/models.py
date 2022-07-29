@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.base_user import BaseUserManager
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from .autosql import autosql
 
 
 class CustomUserManager(BaseUserManager):
@@ -59,4 +62,17 @@ class User(AbstractUser):
     #     return self.email
 
 class Autosql(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.TextField(max_length=200)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Autosql.objects.create(user=instance)
+        username = instance.username
+        autosql(username)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.autosql.save()

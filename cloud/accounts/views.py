@@ -5,6 +5,7 @@ from accounts.models import User
 from rest_framework.views import APIView
 from .serializers import *
 from rest_framework.response import Response
+from .autosql import autosql
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,6 +20,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class AddsqlView(APIView):
     def post(self, request):
         username = request.user.username
+        autosql(username)
         serializer = AutosqlSerializer(username)
 
         return Response(serializer.data)

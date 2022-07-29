@@ -17,8 +17,8 @@ def autosql(username):
     #사용자의 ID와 똑같이 ID, MetaData, UserGroup, HostGroup 생성해줄 예정 
     #입력받아야하는 것들
     ID = username
-    lastname = '성민'
-    firstname = '김'
+    lastname = username[:2]
+    firstname = username[:-2]
 
     #기본키 생성할 때 이 번호부터 시작하기
     # 1.호스트 그룹
