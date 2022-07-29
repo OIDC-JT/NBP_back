@@ -6,7 +6,7 @@ from rest_framework import views
 from .serializers import *
 
 class hoslistView(APIView):
-    def post(self, request):
+    def get(self, request):
         username = request.user.username
         serializer = GethostSerializer(username)
 
