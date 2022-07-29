@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'accounts',
     'serveradd',
+    'securitybatch',
 
     # user auth
     'rest_framework_simplejwt.token_blacklist',

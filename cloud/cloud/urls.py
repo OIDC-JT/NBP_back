@@ -21,6 +21,7 @@ urlpatterns = [
     path('', include('nbprun.urls')),
     path('accountsadd/', include('accounts.urls')),
     path('serveradd/', include('serveradd.urls')),
+    path('securitybatch/', include('securitybatch.urls')),
     path('accounts/', include('dj_rest_auth.urls')),
     path('accounts/', include('dj_rest_auth.registration.urls')),
     path('accounts/', include('allauth.urls')),
