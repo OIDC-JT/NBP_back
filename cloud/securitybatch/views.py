@@ -17,3 +17,13 @@ class SecuritybatchView(APIView):
         serializer = AddsecuritySerializer(request.data)
 
         return Response(serializer.data)
+
+class SecuritybatchsubView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        servertype = request.data.get('servertype')
+        servername = request.data.get('servername')
+        Security_batch(username, servertype, servername)
+        serializer = AddsecuritysubSerializer(request.data)
+
+        return Response(serializer.data)

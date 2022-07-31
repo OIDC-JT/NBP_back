@@ -5,4 +5,5 @@ from . import views
 app_name="serveradd"
 urlpatterns = [
     path('',views.ServeraddView.as_view()),
+    path('sub/',views.ServeraddsubView.as_view()),
 ]

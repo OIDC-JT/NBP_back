@@ -69,9 +69,17 @@
 ### 127.0.0.1:8000/serveradd/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
 
+### 서버 추가_planB
+### 127.0.0.1:8000/serveradd/sub/ - POST 메소드 사용
+    username,servertype, servername에 해당하는 문자열 값 입력
+
 ### 보안 배치 파일
 ### 127.0.0.1:8000/securitybatch/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
+
+### 보안 배치 파일_planB
+### 127.0.0.1:8000/securitybatch/sub/ - POST 메소드 사용
+    username, servertype, servername에 해당하는 문자열 값 입력
 
 ### 사용자의 호스트 목록 조회
 ### 127.0.0.1:8000/hostlist/ - GET 메소드 사용

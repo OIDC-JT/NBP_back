@@ -4,3 +4,8 @@ from django.db import models
 class Securitybatch(models.Model):
     servertype = models.TextField(max_length=100)
     servername = models.TextField(max_length=100)
+
+class Securitybatchsub(models.Model):
+    username = models.TextField(max_length=100)
+    servertype = models.TextField(max_length=100)
+    servername = models.TextField(max_length=100)

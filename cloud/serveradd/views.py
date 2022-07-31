@@ -17,3 +17,13 @@ class ServeraddView(APIView):
         serializer = AddserverSerializer(request.data)
 
         return Response(serializer.data)
+
+class ServeraddsubView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        servertype = request.data.get('servertype')
+        servername = request.data.get('servername')
+        batch(username, servertype, servername)
+        serializer = AddserversubSerializer(request.data)
+
+        return Response(serializer.data)

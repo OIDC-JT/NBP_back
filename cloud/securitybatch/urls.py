@@ -5,4 +5,5 @@ from . import views
 app_name="securitybatch"
 urlpatterns = [
     path('',views.SecuritybatchView.as_view()),
+    path('sub',views.SecuritybatchsubView.as_view()),
 ]

@@ -7,3 +7,9 @@ class AddsecuritySerializer(serializers.Serializer):
    class Meta:
       model = Securitybatch
       fields = ('username','servertype', 'servername')
+
+class AddsecuritysubSerializer(serializers.Serializer):
+
+   class Meta:
+      model = Securitybatchsub
+      fields = ('username','servertype', 'servername')
