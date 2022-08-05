@@ -16,7 +16,8 @@ def NBP(list):       #리스트로 변환 Cpu(변수=a), 변환 Mem(변수=b) �
     
 
     for child in bsObj.find("tbody").children:
-        a1 = str(child).replace('Standard-g2','').replace('High CPU-g2','').replace('High Memory-g2','').replace('<tr><th rowspan="5">', '').replace('<td rowspan="5">일반 데이터베이스 서버<br/>개인 홈페이지 운영</td>','').replace('<td rowspan="5">과학적 모델링<br/>게임 서버</td>','').replace('<td rowspan="5">고성능 데이터베이스 서버<br/>대규모 게임 서비스</td>','').replace('<tr><td>','').replace('</td></tr>','').replace(',','').replace('</td><td>', ', ').replace('</th><td>','').replace('원','W')
+        #a1 = str(child).replace('Standard-g2','').replace('High CPU-g2','').replace('High Memory-g2','').replace('<tr><th rowspan="5">', '').replace('<td rowspan="5">일반 데이터베이스 서버<br/>개인 홈페이지 운영</td>','').replace('<td rowspan="5">과학적 모델링<br/>게임 서버</td>','').replace('<td rowspan="5">고성능 데이터베이스 서버<br/>대규모 게임 서비스</td>','').replace('<tr><td>','').replace('</td></tr>','').replace(',','').replace('</td><td>', ', ').replace('</th><td>','').replace('원','W')
+        a1 = str(child).replace('Standard-g2','').replace('High CPU-g2','').replace('High Memory-g2','').replace('</td><td data-v-978526a4="" rowspan="5">일반 데이터베이스 서버<br data-v-978526a4=""/>개인 홈페이지 운영','').replace('</td><td data-v-978526a4="" rowspan="5">과학적 모델링<br data-v-978526a4=""/>게임 서버','').replace('</td><td data-v-978526a4="" rowspan="5">고성능 데이터베이스 서버<br data-v-978526a4=""/>대규모 게임 서비스','').replace('</td></tr>','').replace(',','').replace('원','W').replace('<tr data-v-978526a4=""><th data-v-978526a4="" rowspan="5"></th><td data-v-978526a4="">','').replace('<tr data-v-978526a4=""><td data-v-978526a4="">','').replace('</td><td data-v-978526a4="">',',')
 
         a2 = a1.split(',')
         
@@ -42,7 +43,7 @@ def NBP(list):       #리스트로 변환 Cpu(변수=a), 변환 Mem(변수=b) �
         b = lst[i][1]      #입력받은 리스트 변수 지정
 
         for i in range(len(List)):                                  #받은 CPU, MEM 값보다 큰값만 추출
-            if a < int(List[i][1]) and b < int(List[i][2]):
+            if a <= int(List[i][1]) and b <= int(List[i][2]):
                 List2.append(List[i])
 
         c=100000000000000             #초기값
