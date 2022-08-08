@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'serveradd',
     'securitybatch',
     'hostlist',
+    'securitytxt',
 
     # user auth
     'rest_framework_simplejwt.token_blacklist',
